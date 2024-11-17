@@ -19,3 +19,16 @@ h2 {
 
 además tampoco he podido hacer que todas las img estén al mismo tamaño.*/
 
+
+img {
+  width: 250px;
+  height: auto;
+}
+
+.genero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
