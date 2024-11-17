@@ -15,14 +15,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-.contenedor {
-  display: flex; 
-  flex-wrap: wrap;}
+/*no consigo colocar las películas en horizontal creando un display flex, wrap, justify content...
 
-.peliculas1 {
-  flex: 0 1 200px; 
-  margin: 1rem; 
-  display: flex; 
-  flex-wrap: wrap;
+además tampoco he podido hacer que todas las img estén al mismo tamaño.*/
 
-}

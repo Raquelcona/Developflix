@@ -1,6 +1,6 @@
 import peliculas from './peliculas.js'
 
-console.log(peliculas)
+/*console.log(peliculas)
 
 const peliculas1 = import('./peliculas.json');
 
@@ -40,3 +40,43 @@ contenedoresGenero.forEach(contenedor => {
 
   mostrarPeliculas(peliculasFiltradas, contenedor);
 });
+*/
+
+const accion = [];
+const thriller = [];
+const aventura = [];
+
+peliculas.forEach(pelicula => {
+  pelicula.genre_ids.forEach (genreid => {
+    if (genreid === 28) accion.push (pelicula);
+    if (genreid === 53) thriller.push (pelicula);
+    if (genreid === 12) aventura.push (pelicula);
+  })
+})
+
+const divAccion = document.getElementById (`genero-28`); 
+
+accion.forEach(pelicula => {
+    divAccion.innerHTML += `<div>
+      <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}">
+      <h3>${pelicula.title}</h3>
+    </div>`
+  })
+
+
+const divThriller = document.getElementById (`genero-53`);
+  thriller.forEach(pelicula => {
+    divThriller.innerHTML += `<div>
+      <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}">
+      <h3>${pelicula.title}</h3>
+    </div>`
+  })
+
+
+const divAventura = document.getElementById (`genero-12`);
+  aventura.forEach(pelicula => {
+    divAventura.innerHTML += `<div>
+      <img src="https://image.tmdb.org/t/p/w500/${pelicula.poster_path}" alt="${pelicula.title}">
+      <h3>${pelicula.title}</h3>
+    </div>`
+  })
